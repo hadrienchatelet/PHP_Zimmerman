@@ -24,16 +24,17 @@ class UserController extends Controller
         $user->setMail("h.chatelet@outlook.fr");
         $user->setGitHub("hadrienchatelet");
 
-        return $this->render(
-            'User/create.html.twig', ["prenom"=>$user->getPrenom(), "nom"=>$user->getNom()]
-        );
-
         $user1 = new User();
         $user1->setId(1);
         $user1->setNom("Bigard");
         $user1->setPrenom("Samuel");
         $user1->setMail("samuelbigard@gmail.com");
         $user1->setGitHub("samuelbigard");
+
+        return $this->render(
+            'User/create.html.twig', ["prenom1"=>$user->getPrenom(), "nom1"=>$user->getNom(),
+                "prenom2"=>$user1->getPrenom(), "nom2"=>$user1->getNom()]
+        );
 
         $tabUser = [$user, $user1];
 
