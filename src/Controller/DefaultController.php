@@ -14,10 +14,13 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
+    /**
+     *  @Route("/", name="hello_world")
+     */
     public function index()
     {
         return new Response(
-            '<html><h1>Hello World !</h1></html>'
+            'Hello World !'
         );
     }
 }
