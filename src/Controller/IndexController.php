@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 class IndexController extends Controller
 {
     /**
-     *  @Route("/helloworld", name="hello_world")
+     *  @Route("/helloworld", name="app_index_displayhelloworld")
      */
     public function displayHelloWorld()
     {
