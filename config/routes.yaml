@@ -7,8 +7,8 @@ app_user_create:
     defaults: { _controller: 'App\Controller\UserController::create' }
 
 app_user_show:
-    path: /show-user
-    defaults: { _controller: 'App\Controller\UserController::show' }
+    path: /list-user
+    defaults: { _controller: 'App\Controller\UserController::showList' }
 
 # first, run composer req annotations
 controllers:

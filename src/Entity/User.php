@@ -55,6 +55,14 @@ class User
     }
 
     /**
+     * @param int $id
+     */
+    public function setId(int $id)
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @return string
      */
     public function getNom(): string
