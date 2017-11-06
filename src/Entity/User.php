@@ -6,7 +6,7 @@
  * Time: 15:43
  */
 
-namespace TPZ1\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -46,4 +46,91 @@ class User
     private $discord;
 
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNom(): string
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom(string $nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrenom(): string
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param string $prenom
+     */
+    public function setPrenom(string $prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMail(): string
+    {
+        return $this->mail;
+    }
+
+    /**
+     * @param string $mail
+     */
+    public function setMail(string $mail)
+    {
+        $this->mail = $mail;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGitHub(): string
+    {
+        return $this->gitHub;
+    }
+
+    /**
+     * @param string $gitHub
+     */
+    public function setGitHub(string $gitHub)
+    {
+        $this->gitHub = $gitHub;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscord(): string
+    {
+        return $this->discord;
+    }
+
+    /**
+     * @param string $discord
+     */
+    public function setDiscord(string $discord)
+    {
+        $this->discord = $discord;
+    }
 }
