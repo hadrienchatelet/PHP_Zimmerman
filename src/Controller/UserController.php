@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class UserController extends Controller
 {
-
+    private $tabUser;
     public function create()
     {
         $user = new User();
@@ -31,19 +31,22 @@ class UserController extends Controller
         $user1->setMail("samuelbigard@gmail.com");
         $user1->setGitHub("samuelbigard");
 
+        $this->tabUser = [$user, $user1];
+
         return $this->render(
             'User/create.html.twig', ["prenom1"=>$user->getPrenom(), "nom1"=>$user->getNom(),
                 "prenom2"=>$user1->getPrenom(), "nom2"=>$user1->getNom()]
         );
-
-        $tabUser = [$user, $user1];
-
-        return $tabUser;
     }
 
     public function showList()
     {
-
+        foreach ($this->tabUser as $user)
+        {
+            return $this->render(
+                'User/showlist.html.twig', ["id"=>$user->getId(), "nom"=>$user->getNom(), "prenom"=>$user->getPrenom()]
+            );
+        }
     }
 
 }
